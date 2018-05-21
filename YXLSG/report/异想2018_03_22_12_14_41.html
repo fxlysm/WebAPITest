@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>苏宁-接口用例执行报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.4"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { white-space: pre-wrap;word-wrap: break-word; }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 1px;
+    top: 0px;
+    right:0px
+    /*border: solid #627173 1px; */
+    padding: 1px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 1pt;
+    /* width: 500px;*/
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 99%;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #709d59; }
+.failClass  { background-color: #FF5151; }
+.errorClass { background-color: #66ccff; }
+.passCase   { color: #709d59; font-weight: bold;}
+.failCase   { color: #FF5151; font-weight: bold; }
+.errorCase  { color: #66ccff; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+#div_base {
+            position:absolute;
+            top:0%;
+            left:5%;
+            right:5%;
+            width: auto;
+            height: auto;
+            margin: -15px 0 0 0;
+}
+</style>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div id="div_base">
+
+<div class='page-header'>
+<h1>苏宁-接口用例执行报告</h1>
+<p class='attribute'><strong>测试人员:</strong> 刘勇</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-03-22 12:14:41</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:01.957000</p>
+<p class='attribute'><strong>测试结果:</strong> 共 14 通过 2 错误 12</p>
+<p class='attribute'><strong>测试通过率:</strong> 14.29%</p>
+
+</div>
+<p class='description'>苏宁 -主版本</p>
+
+
+
+<div class="btn-group btn-group-sm">
+<button class="btn btn-default" onclick='javascript:showCase(0)'>概览</button>
+<button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
+<button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+</div>
+<p></p>
+<table id='result_table' class="table table-bordered">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试套件/测试用例</td>
+    <td>总数</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>查看</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Mgr_LogInCase.MallLogInTestCase: 管理后台-登录及注销</td>
+    <td>5</td>
+    <td>2</td>
+    <td>0</td>
+    <td>3</td>
+    <td><a href="javascript:showClassDetail('c1',5)">详情</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>testGetcommonFunctions: 管理后台-获取首页-常用功能</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        错误</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: 
+***** Begin time :  2018-03-22  12:14:41  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMTgwMSwiZXhwIjoxNTIxNzYzOTIxfQ.e5atOjC0Dv73nqVcrJnp8CM48DskGQETmukyW3S3C4vmSCXFxGn2vkrRsf-lJMz3IaeZ_bh_7DAwxkJf9_MzNQ"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMTgwMSwiZXhwIjoxNTIxNzYzOTIxfQ.e5atOjC0Dv73nqVcrJnp8CM48DskGQETmukyW3S3C4vmSCXFxGn2vkrRsf-lJMz3IaeZ_bh_7DAwxkJf9_MzNQ
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=4930496d-093b-494d-904e-db71676eee78 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/home/commonFunctions
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_LogInCase.py", line 54, in testGetcommonFunctions
+    print MGR_Common_Query(self,self.userName,self.password,data,apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>testGetshopGeneralSituation: 管理后台-获取首页-商铺状态</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: 
+***** Begin time :  2018-03-22  12:14:41  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMTk1OSwiZXhwIjoxNTIxNzYzOTIxfQ.LDG9f8-7Iitd8FiM-Rozx3kTfdwzjDIRrYZ1MYeh6oVPV9rfOwPyV13bnFENPxolXU_bkZgaA8Z_gWcBTa-1kA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMTk1OSwiZXhwIjoxNTIxNzYzOTIxfQ.LDG9f8-7Iitd8FiM-Rozx3kTfdwzjDIRrYZ1MYeh6oVPV9rfOwPyV13bnFENPxolXU_bkZgaA8Z_gWcBTa-1kA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=d19de04f-f81a-4c82-988b-a3b157c82677 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/home/shopGeneralSituation
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_LogInCase.py", line 48, in testGetshopGeneralSituation
+    print MGR_Common_Query(self,self.userName,self.password,data,apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td class='errorCase'><div class='testcase'>testGettodayRealTimeData: 管理后台-获取首页-今日实时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        错误</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjExNCwiZXhwIjoxNTIxNzYzOTIyfQ.DIzPZePt1eleZ4Kgacso51hKMGdqsEOTaAOw71BZRkrWHpi9inKoTSuSfjxJBY99222Fh2_Otg5JjO7ai1kkog"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjExNCwiZXhwIjoxNTIxNzYzOTIyfQ.DIzPZePt1eleZ4Kgacso51hKMGdqsEOTaAOw71BZRkrWHpi9inKoTSuSfjxJBY99222Fh2_Otg5JjO7ai1kkog
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=5dfba0db-eb6c-4044-9c94-90d1a7e1a1b8 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/home/todayRealTimeData
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_LogInCase.py", line 42, in testGettodayRealTimeData
+    print MGR_Common_Query(self,self.userName,self.password,data,apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testmgrlogin: 管理后台-登录</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        通过</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjI3NywiZXhwIjoxNTIxNzYzOTIyfQ.cff09Bbx6KTWtSbnaBlCunRpIQzVUmF0CskqKA1NiOB3N8anIkLK-Uxxo7Baj6xRiXINUmbbiJZbdUQ9jyDY7g"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjI3NywiZXhwIjoxNTIxNzYzOTIyfQ.cff09Bbx6KTWtSbnaBlCunRpIQzVUmF0CskqKA1NiOB3N8anIkLK-Uxxo7Baj6xRiXINUmbbiJZbdUQ9jyDY7g
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testmgrlogout: 管理后台注销</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Mgr_QueryCase.ShoperGoodList: 管理后台-商家商品管理</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c2',2)">详情</a></td>
+</tr>
+
+<tr id='ft2.1' class='none'>
+    <td class='errorCase'><div class='testcase'>testshoperInsaleList: 销售中---商品列表</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        错误</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjQwMiwiZXhwIjoxNTIxNzYzOTIyfQ.4KRalEPmcPLz7G9Ub14d4rh4SQta1zFHdC_WLMGxGlEfLVC3JOLO4HT1k4JBKsNtmnYDoWrmWjaASqFYFdaN7g"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjQwMiwiZXhwIjoxNTIxNzYzOTIyfQ.4KRalEPmcPLz7G9Ub14d4rh4SQta1zFHdC_WLMGxGlEfLVC3JOLO4HT1k4JBKsNtmnYDoWrmWjaASqFYFdaN7g
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=09178992-4d4d-4cd5-8d06-404c5d6de0e6 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/goods/pageList
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 40, in testshoperInsaleList
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft2.2' class='none'>
+    <td class='errorCase'><div class='testcase'>testshoperInsale_name_query: 销售中---商家编号搜索</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.2')" >
+        错误</a>
+
+    <div id='div_ft2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.2: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjU3NSwiZXhwIjoxNTIxNzYzOTIyfQ.3iC6J47KjngjHZ-EJ-BlBVtcISwH30nbm7nF9N5Hbv0p-9L7XsryzcpdyyzhdyIwb3tSblxBZH7-jiCucvj7QA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjU3NSwiZXhwIjoxNTIxNzYzOTIyfQ.3iC6J47KjngjHZ-EJ-BlBVtcISwH30nbm7nF9N5Hbv0p-9L7XsryzcpdyyzhdyIwb3tSblxBZH7-jiCucvj7QA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=18c91f27-4e56-4c72-802c-d405bb28f6c1 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/goods/pageList
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 51, in testshoperInsale_name_query
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='errorClass'>
+    <td>Mgr_QueryCase.SuNingGoodList: 管理后台-苏宁商品管理</td>
+    <td>7</td>
+    <td>0</td>
+    <td>0</td>
+    <td>7</td>
+    <td><a href="javascript:showClassDetail('c3',7)">详情</a></td>
+</tr>
+
+<tr id='ft3.1' class='none'>
+    <td class='errorCase'><div class='testcase'>testGoodsDetails: 某个商品的详情</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.1')" >
+        错误</a>
+
+    <div id='div_ft3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.1: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjcyNSwiZXhwIjoxNTIxNzYzOTIyfQ.kXozxtd90QaUaLlWwQ-SQz3SXye0yFtPcX3H4zPahXZwffFb9wUimB0Dp9LoIEDacgog7dCG1dS7ZStGU_rJvw"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjcyNSwiZXhwIjoxNTIxNzYzOTIyfQ.kXozxtd90QaUaLlWwQ-SQz3SXye0yFtPcX3H4zPahXZwffFb9wUimB0Dp9LoIEDacgog7dCG1dS7ZStGU_rJvw
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=e6365a1c-6024-40d3-830b-a67a8fc98588 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/details
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 115, in testGoodsDetails
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.2' class='none'>
+    <td class='errorCase'><div class='testcase'>testGoodsShopInsale: 上架商家查看</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.2')" >
+        错误</a>
+
+    <div id='div_ft3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.2: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjg3NSwiZXhwIjoxNTIxNzYzOTIyfQ.BEqIPqDqy3DLjZKdebwmG06fjNaWwAXQk3m1Xissc0QPNbv51iXYGEgHHgOD5dgRrujlfTr3FRUa1uwhBBUdAQ"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMjg3NSwiZXhwIjoxNTIxNzYzOTIyfQ.BEqIPqDqy3DLjZKdebwmG06fjNaWwAXQk3m1Xissc0QPNbv51iXYGEgHHgOD5dgRrujlfTr3FRUa1uwhBBUdAQ
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=3c1898c4-92b3-4836-83b8-07eb397bc6e2 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/queryShops
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 122, in testGoodsShopInsale
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.3' class='none'>
+    <td class='errorCase'><div class='testcase'>testInsaleList: 销售中</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.3')" >
+        错误</a>
+
+    <div id='div_ft3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.3: 
+***** Begin time :  2018-03-22  12:14:42  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzAyNSwiZXhwIjoxNTIxNzYzOTIzfQ.E3r1fqVq0OmH7siiwq4ngb3m66gVchJT6kC3N120XUfTCUzrmmUWG8w8Y-jhOxBkafnbxZ4hi8dEwEdSzAScUQ"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzAyNSwiZXhwIjoxNTIxNzYzOTIzfQ.E3r1fqVq0OmH7siiwq4ngb3m66gVchJT6kC3N120XUfTCUzrmmUWG8w8Y-jhOxBkafnbxZ4hi8dEwEdSzAScUQ
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=915dfd2e-ac66-41d5-8dcc-e76c27661c35 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/pageListOfManage
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 82, in testInsaleList
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.4' class='none'>
+    <td class='errorCase'><div class='testcase'>testInsaleList_oneGoodQuery1: 销售中----某个商品编号搜索查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.4')" >
+        错误</a>
+
+    <div id='div_ft3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.4: 
+***** Begin time :  2018-03-22  12:14:43  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzE3OSwiZXhwIjoxNTIxNzYzOTIzfQ.TU8A9KFVOR9c1EX84fRapzfbdY4FtproBZIsXTuqlQAxWzwBjvIOQTv6FYqlE62DnGbRfWrvSXWdtARvnsvyQA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzE3OSwiZXhwIjoxNTIxNzYzOTIzfQ.TU8A9KFVOR9c1EX84fRapzfbdY4FtproBZIsXTuqlQAxWzwBjvIOQTv6FYqlE62DnGbRfWrvSXWdtARvnsvyQA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=ad968f4e-0a11-4337-9cda-547e5c96e147 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/pageListOfManage
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 88, in testInsaleList_oneGoodQuery1
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.5' class='none'>
+    <td class='errorCase'><div class='testcase'>testInsaleList_oneGoodQuery2: 销售中----某个商品名搜索查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.5')" >
+        错误</a>
+
+    <div id='div_ft3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.5: 
+***** Begin time :  2018-03-22  12:14:43  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzMzMCwiZXhwIjoxNTIxNzYzOTIzfQ.FNncymyqom3lygMSpsmbw1vwJKRtG7XRf8S0HQoIO3Rw8yUw-F2vIJecbpiEN9Ql8TinDoLXZsvNnuTZnF3IGw"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzMzMCwiZXhwIjoxNTIxNzYzOTIzfQ.FNncymyqom3lygMSpsmbw1vwJKRtG7XRf8S0HQoIO3Rw8yUw-F2vIJecbpiEN9Ql8TinDoLXZsvNnuTZnF3IGw
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=238c14c9-3cc3-41d2-852d-1f7b4777b978 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/pageListOfManage
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 94, in testInsaleList_oneGoodQuery2
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.6' class='none'>
+    <td class='errorCase'><div class='testcase'>testblockedsaleList: 已屏蔽</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.6')" >
+        错误</a>
+
+    <div id='div_ft3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.6: 
+***** Begin time :  2018-03-22  12:14:43  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzQ3MCwiZXhwIjoxNTIxNzYzOTIzfQ.lUgWCa9v65a1l3fcX51Zmb5V-Jh7-qGDpKtoQyyT4VSUNCbiTTibCFTilbNYBW0KOjwrVp0CZ0u9gfG1xIxopQ"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzQ3MCwiZXhwIjoxNTIxNzYzOTIzfQ.lUgWCa9v65a1l3fcX51Zmb5V-Jh7-qGDpKtoQyyT4VSUNCbiTTibCFTilbNYBW0KOjwrVp0CZ0u9gfG1xIxopQ
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=1b020d08-ed26-46d9-a319-8a3138ba7928 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/pageListOfManage
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 108, in testblockedsaleList
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft3.7' class='none'>
+    <td class='errorCase'><div class='testcase'>testoffsaleList: 已下架</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft3.7')" >
+        错误</a>
+
+    <div id='div_ft3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft3.7: 
+***** Begin time :  2018-03-22  12:14:43  Thursday
+http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api/api/authentication/login
+admin
+111111
+{"statusCode":"200","statusMessage":"操作成功","detailMessage":null,"responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzYxNCwiZXhwIjoxNTIxNzYzOTIzfQ.bmvcBMapDxohP-wqkYFfNHGEU-xM77h_pT2wY-D-_ksJ6oaBhlmgOTB-C7zjv9zw8n3hRTanSzTSrP0goA_Ghw"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUyMTY5MTkyMzYxNCwiZXhwIjoxNTIxNzYzOTIzfQ.bmvcBMapDxohP-wqkYFfNHGEU-xM77h_pT2wY-D-_ksJ6oaBhlmgOTB-C7zjv9zw8n3hRTanSzTSrP0goA_Ghw
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=ff14e830-193d-4e9b-b1aa-18695c964474 for sit.mall-mgr-b2b.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-b2b.1332255.com/mall-mgr-b2b-api//api/product/pageListOfManage
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_QueryCase.py", line 101, in testoffsaleList
+    print MGR_Common_Query(self, self.userName, self.password, data, apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 67, in MGR_Common_Query
+    s = requests.post(shopGeneralSituation_url, data, headers=headers)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 494, in request
+    prep = self.prepare_request(req)
+  File "C:\Python\Python27\lib\site-packages\requests\sessions.py", line 437, in prepare_request
+    hooks=merge_hooks(request.hooks, self.hooks),
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 306, in prepare
+    self.prepare_headers(headers)
+  File "C:\Python\Python27\lib\site-packages\requests\models.py", line 440, in prepare_headers
+    check_header_validity(header)
+  File "C:\Python\Python27\lib\site-packages\requests\utils.py", line 869, in check_header_validity
+    raise InvalidHeader("Invalid return character or leading space in header: %s" % name)
+InvalidHeader: Invalid return character or leading space in header: User-Agent
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>14</td>
+    <td>2</td>
+    <td>0</td>
+    <td>12</td>
+    <td></td>
+</tr>
+</table>
+
+
+<div id='ending'>
+    <p align="center">
+    Copyright &copy 2017
+    <a href="http://www.heilpay.com" target="_blank">HeilPay</a>
+    Inc. All rights reserved.
+    </p>
+    <p align="center">TestGroup ,A4-1901 Room,Kexing Science Park,Nanshan,Shenzhen,GD,China </p>
+</div>
+
+
+</div>
+</body>
+</html>

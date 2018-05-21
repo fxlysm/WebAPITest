@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>苏宁-接口用例执行报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.4"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { white-space: pre-wrap;word-wrap: break-word; }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 2ex;
+    margin-bottom: 3ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 1px;
+    top: 0px;
+    right:0px
+    /*border: solid #627173 1px; */
+    padding: 1px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 1pt;
+    /* width: 500px;*/
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 99%;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #709d59; }
+.failClass  { background-color: #FF5151; }
+.errorClass { background-color: #66ccff; }
+.passCase   { color: #709d59; font-weight: bold;}
+.failCase   { color: #FF5151; font-weight: bold; }
+.errorCase  { color: #66ccff; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+#div_base {
+            position:absolute;
+            top:0%;
+            left:5%;
+            right:5%;
+            width: auto;
+            height: auto;
+            margin: -15px 0 0 0;
+}
+</style>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+<div id="div_base">
+
+<div class='page-header'>
+<h1>苏宁-接口用例执行报告</h1>
+<p class='attribute'><strong>测试人员:</strong> 刘勇</p>
+<p class='attribute'><strong>开始时间:</strong> 2018-02-07 17:34:49</p>
+<p class='attribute'><strong>运行时长:</strong> 0:00:04.873000</p>
+<p class='attribute'><strong>测试结果:</strong> 共 13 通过 12 失败 1</p>
+<p class='attribute'><strong>测试通过率:</strong> 92.31%</p>
+
+</div>
+<p class='description'>苏宁 -主版本</p>
+
+
+
+<div class="btn-group btn-group-sm">
+<button class="btn btn-default" onclick='javascript:showCase(0)'>概览</button>
+<button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
+<button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+</div>
+<p></p>
+<table id='result_table' class="table table-bordered">
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>测试套件/测试用例</td>
+    <td>总数</td>
+    <td>通过</td>
+    <td>失败</td>
+    <td>错误</td>
+    <td>查看</td>
+</tr>
+
+<tr class='failClass'>
+    <td>Mgr_LogInCase.MallLogInTestCase: 管理后台-登录及注销</td>
+    <td>5</td>
+    <td>4</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',5)">详情</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='failCase'><div class='testcase'>testGetcommonFunctions: 管理后台-获取首页-常用功能</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        失败</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: 
+***** Begin time :  2018-02-07  17:34:49  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NTAxMiwiZXhwIjoxNTE4MDY3OTk1fQ.eDtfm0JtS4BuQBsRtjqek7UsgPsnMmcofhjqFjX_kapsTPwpRQN59mq6tM4zkX-y5DGGQeklKFPdriPBpzCKpw"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NTAxMiwiZXhwIjoxNTE4MDY3OTk1fQ.eDtfm0JtS4BuQBsRtjqek7UsgPsnMmcofhjqFjX_kapsTPwpRQN59mq6tM4zkX-y5DGGQeklKFPdriPBpzCKpw
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=bdcfcae0-adce-4a66-917b-266c41ac39b4 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/home/commonFunctions
+{"statusCode":"500","statusMessage":"服务器繁忙,EXCEPTION_CODE:9001"}
+Traceback (most recent call last):
+  File "./cases/suning\Mgr_LogInCase.py", line 53, in testGetcommonFunctions
+    print MGR_Common_Query(self,self.userName,self.password,data,apiurl)
+  File "D:\PycharmProjects\YXLSG\mode\suning\mgr_login.py", line 78, in MGR_Common_Query
+    assert False
+AssertionError
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testGetshopGeneralSituation: 管理后台-获取首页-商铺状态</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.2: 
+***** Begin time :  2018-02-07  17:34:49  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NTE4OCwiZXhwIjoxNTE4MDY3OTk1fQ.obLc9EngNIDNVScZKftqgqUfilbzR-1RJU49oASAALdeFi7U64xZAZZYb2wbd99fZc2G9ZJcGbG8iQikzVzn4w"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NTE4OCwiZXhwIjoxNTE4MDY3OTk1fQ.obLc9EngNIDNVScZKftqgqUfilbzR-1RJU49oASAALdeFi7U64xZAZZYb2wbd99fZc2G9ZJcGbG8iQikzVzn4w
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=21a37f3c-5d25-43d7-984a-771effda11b1 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/home/shopGeneralSituation
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"shopCount":"41","boughtGoodsUserCount":"27","gmv":"2186268374.79","settleAmount":"224.37","commissionAmount":"24.71","waitSettleAmount":"547384.99","waitDeliveryOrderCount":"1173","refundOrderCount":"74","finishOrderCount":"192","salesAmount":"1113484.58"}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"shopCount":"41","boughtGoodsUserCount":"27","gmv":"2186268374.79","settleAmount":"224.37","commissionAmount":"24.71","waitSettleAmount":"547384.99","waitDeliveryOrderCount":"1173","refundOrderCount":"74","finishOrderCount":"192","salesAmount":"1113484.58"}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testGettodayRealTimeData: 管理后台-获取首页-今日实时</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.3: 
+***** Begin time :  2018-02-07  17:34:49  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NTQ2OSwiZXhwIjoxNTE4MDY3OTk1fQ.rZdEV6OOsn7nG-f3xODne7MchETvAXcbV7m8dFTTpO0QIffloysAy8eYbReqHFqF4gDDKijz8s5qwfECBA8QnA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NTQ2OSwiZXhwIjoxNTE4MDY3OTk1fQ.rZdEV6OOsn7nG-f3xODne7MchETvAXcbV7m8dFTTpO0QIffloysAy8eYbReqHFqF4gDDKijz8s5qwfECBA8QnA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=9fa3f88a-8eb2-41b8-9828-160c25c08145 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/home/todayRealTimeData
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"waitAuditShopCount":"0","visitorCount":"0","browseCount":"0","payOrderCount":"0","payAmount":"0.00","payGoodsCount":"0"}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"waitAuditShopCount":"0","visitorCount":"0","browseCount":"0","payOrderCount":"0","payAmount":"0.00","payGoodsCount":"0"}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testmgrlogin: 管理后台-登录</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        通过</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.4: 
+***** Begin time :  2018-02-07  17:34:50  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NjA0OSwiZXhwIjoxNTE4MDY3OTk2fQ.n6Zy5w4W3ElcsRMtMYLWjGhjPn2y-5DOSSPPOtKYt5jyA8oeeK0bcqNxBdw0ZxnB8r_HC_6N9Y0PYf4YTK2wrA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NjA0OSwiZXhwIjoxNTE4MDY3OTk2fQ.n6Zy5w4W3ElcsRMtMYLWjGhjPn2y-5DOSSPPOtKYt5jyA8oeeK0bcqNxBdw0ZxnB8r_HC_6N9Y0PYf4YTK2wrA
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testmgrlogout: 管理后台注销</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt1.5: 
+***** Begin time :  2018-02-07  17:34:50  Wednesday
+
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Mgr_QueryCase.ShoperGoodList: 管理后台-商家商品管理</td>
+    <td>1</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',1)">详情</a></td>
+</tr>
+
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testshoperInsaleList: 销售中</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
+        通过</a>
+
+    <div id='div_pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt2.1: 
+***** Begin time :  2018-02-07  17:34:50  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NjE3NSwiZXhwIjoxNTE4MDY3OTk2fQ.VP0pAKXlmlOdwVS4FDr6NwPb5zFJIRrbF-8vmyMBEWlTDj805C0dwdFfXjaV9Xye_EfzQq5gIXFULh0pd34T2A"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NjE3NSwiZXhwIjoxNTE4MDY3OTk2fQ.VP0pAKXlmlOdwVS4FDr6NwPb5zFJIRrbF-8vmyMBEWlTDj805C0dwdFfXjaV9Xye_EfzQq5gIXFULh0pd34T2A
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=d693ae04-440d-478f-9bc7-742367b29228 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/goods/pageList
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":10,"size":10,"total":132,"pages":14,"list":[{"id":"974","name":"11月30号发布商品","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"99","salesCount":"1","createTime":"2017-11-30 09:33:47","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVofX1eAHu2QAAb86VzUY7E389.jpg","deleteTime":"","statusDesc":"","shopName":"这是文海186开的店1","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/974","offShelfDesc":""},{"id":"941","name":"反反复复","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-23 16:24:40","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoWhUWAdBgRAAzodQCbVVc930.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/941","offShelfDesc":""},{"id":"570","name":"FFFF","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"8","salesCount":"3","createTime":"2017-11-22 16:01:26","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoVLlWAAm9OAAzodQCbVVc230.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/570","offShelfDesc":""},{"id":"569","name":"DDDD","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-22 16:01:05","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoVLj-AZ0SJAAA9wHkL0hY680.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/569","offShelfDesc":""},{"id":"568","name":"lhy22","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-22 14:28:16","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoVGH2Acfi1AAl5WLU-YRY408.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/568","offShelfDesc":""},{"id":"384","name":"文海发布-实物001","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"100","salesCount":"0","createTime":"2017-11-18 16:03:06","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoP6LyAVBzlAAB0Knv-jGI979.jpg","deleteTime":"","statusDesc":" ","shopName":"这是文海186开的店1","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/384","offShelfDesc":""},{"id":"381","name":"lhy18","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-18 14:42:25","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoP1kWAWxUHAAzodQCbVVc196.jpg","deleteTime":"","statusDesc":"商城批量上架","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/381","offShelfDesc":""},{"id":"380","name":"文海发布-实物1","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"100","salesCount":"0","createTime":"2017-11-18 14:08:28","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoPzkyABaqeAADfR5GtzJk210.jpg","deleteTime":"","statusDesc":"","shopName":"这是文海186开的店1","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/380","offShelfDesc":""},{"id":"377","name":"文海-虚拟","goodsType":"2","goodsTypeDesc":"虚拟商品","price":0.01,"stock":"99","salesCount":"1","createTime":"2017-11-18 10:56:11","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoPoEOABRMTAAisBs32rHc637.png","deleteTime":"","statusDesc":"","shopName":"这是文海186开的店1","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/377","offShelfDesc":""},{"id":"376","name":"文海-实物-包邮","goodsType":"1","goodsTypeDesc":"实物商品","price":0.01,"stock":"99","salesCount":"1","createTime":"2017-11-18 10:19:59","picUrl":"http://img.1332255.com/group1/M00/00/07/wKhKcVoPmKOAXDV7AAvWjGAFG3s082.jpg","deleteTime":"","statusDesc":"","shopName":"这是文海186开的店1","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/376","offShelfDesc":""}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":10,"size":10,"total":132,"pages":14,"list":[{"id":"974","name":"11\u670830\u53f7\u53d1\u5e03\u5546\u54c1","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"99","salesCount":"1","createTime":"2017-11-30 09:33:47","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVofX1eAHu2QAAb86VzUY7E389.jpg","deleteTime":"","statusDesc":"","shopName":"\u8fd9\u662f\u6587\u6d77186\u5f00\u7684\u5e971","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/974","offShelfDesc":""},{"id":"941","name":"\u53cd\u53cd\u590d\u590d","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-23 16:24:40","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoWhUWAdBgRAAzodQCbVVc930.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/941","offShelfDesc":""},{"id":"570","name":"FFFF","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"8","salesCount":"3","createTime":"2017-11-22 16:01:26","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoVLlWAAm9OAAzodQCbVVc230.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/570","offShelfDesc":""},{"id":"569","name":"DDDD","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-22 16:01:05","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoVLj-AZ0SJAAA9wHkL0hY680.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/569","offShelfDesc":""},{"id":"568","name":"lhy22","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-22 14:28:16","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoVGH2Acfi1AAl5WLU-YRY408.jpg","deleteTime":"","statusDesc":"","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/568","offShelfDesc":""},{"id":"384","name":"\u6587\u6d77\u53d1\u5e03-\u5b9e\u7269001","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"100","salesCount":"0","createTime":"2017-11-18 16:03:06","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoP6LyAVBzlAAB0Knv-jGI979.jpg","deleteTime":"","statusDesc":" ","shopName":"\u8fd9\u662f\u6587\u6d77186\u5f00\u7684\u5e971","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/384","offShelfDesc":""},{"id":"381","name":"lhy18","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"11","salesCount":"0","createTime":"2017-11-18 14:42:25","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoP1kWAWxUHAAzodQCbVVc196.jpg","deleteTime":"","statusDesc":"\u5546\u57ce\u6279\u91cf\u4e0a\u67b6","shopName":"lhy-dianpu","shopCode":"LSG00047","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/381","offShelfDesc":""},{"id":"380","name":"\u6587\u6d77\u53d1\u5e03-\u5b9e\u72691","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"100","salesCount":"0","createTime":"2017-11-18 14:08:28","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoPzkyABaqeAADfR5GtzJk210.jpg","deleteTime":"","statusDesc":"","shopName":"\u8fd9\u662f\u6587\u6d77186\u5f00\u7684\u5e971","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/380","offShelfDesc":""},{"id":"377","name":"\u6587\u6d77-\u865a\u62df","goodsType":"2","goodsTypeDesc":"\u865a\u62df\u5546\u54c1","price":0.01,"stock":"99","salesCount":"1","createTime":"2017-11-18 10:56:11","picUrl":"http://img.1332255.com/group1/M00/00/08/wKhKcVoPoEOABRMTAAisBs32rHc637.png","deleteTime":"","statusDesc":"","shopName":"\u8fd9\u662f\u6587\u6d77186\u5f00\u7684\u5e971","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/377","offShelfDesc":""},{"id":"376","name":"\u6587\u6d77-\u5b9e\u7269-\u5305\u90ae","goodsType":"1","goodsTypeDesc":"\u5b9e\u7269\u5546\u54c1","price":0.01,"stock":"99","salesCount":"1","createTime":"2017-11-18 10:19:59","picUrl":"http://img.1332255.com/group1/M00/00/07/wKhKcVoPmKOAXDV7AAvWjGAFG3s082.jpg","deleteTime":"","statusDesc":"","shopName":"\u8fd9\u662f\u6587\u6d77186\u5f00\u7684\u5e971","shopCode":"LSG00035","goodsUrl":"http://sit.mall-sn.1332255.com/shopDetail/376","offShelfDesc":""}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr class='passClass'>
+    <td>Mgr_QueryCase.SuNingGoodList: 管理后台-苏宁商品管理</td>
+    <td>7</td>
+    <td>7</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',7)">详情</a></td>
+</tr>
+
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testGoodsDetails: 某个商品的详情</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.1')" >
+        通过</a>
+
+    <div id='div_pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.1: 
+***** Begin time :  2018-02-07  17:34:50  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NjQwMCwiZXhwIjoxNTE4MDY3OTk2fQ.lcmZoTh7bamVMXkYGovDkw1I9m4lxHYQoNaVG5fVOi9DgUvOhPmBT67eeI6u3MTIicfqSQzBsvfpJyCLW1PgoA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NjQwMCwiZXhwIjoxNTE4MDY3OTk2fQ.lcmZoTh7bamVMXkYGovDkw1I9m4lxHYQoNaVG5fVOi9DgUvOhPmBT67eeI6u3MTIicfqSQzBsvfpJyCLW1PgoA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=744fa599-2b9d-44c5-abe9-ecf5aca56442 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/details
+{"statusCode":"200","statusMessage":"查询成功","responseContent":"{\"statusCode\":\"200\",\"statusMessage\":\"操作成功\",\"responseContent\":{\"id\":13130,\"categoryId\":3876,\"snCategory\":\"03d041f4-74a4-45cd-8cc8-61dffc5447da\",\"skuNo\":\"164463935\",\"generalSku\":\"\",\"skuHash\":0,\"skuProps\":\"\",\"skuDesc\":\"\",\"clusterId\":\"\",\"name\":\"澳洲澳丝婷百花香氛去屑止痒洗发水750ml\",\"weight\":\"1.0\",\"imageUrl\":\"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_1_400x400.jpg\",\"brandName\":\"澳丝婷(Ausitting)\",\"model\":\"\",\"productArea\":\"\",\"upc\":\"9349512000247\",\"saleUnit\":\"件\",\"introduction\":\"&lt;div moduleId='R9000361_2' moduleName='商品信息'&gt;&lt;p&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/103700873738326475761510_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/655347114785347301921400_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/837258561694813555515400_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/182233433013824050493970_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/209452248630897315561200_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/193607216210745227288168_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/146549030510141771285426_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/197944312057636835431950_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/763480311142119699240480_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"http://image.suning.cn/uimg/sop/commodity/142508348816093685176833_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;/p&gt;&lt;/div&gt;&lt;div moduleId='R9000361_3' moduleName='商品特色'&gt;&lt;p&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/146549030510141771285426_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/193607216210745227288168_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/209452248630897315561200_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/655347114785347301921400_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;/p&gt;&lt;/div&gt;&lt;div moduleId='R9000361_4' moduleName='商品实拍'&gt;&lt;p&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/106210798824821156489390_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/125844853913430203272925_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/525509191416286100960100_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;img onload=\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\" src=\\\"https://image.suning.cn/uimg/sop/commodity/839098276583389277506700_x.jpg\\\" alt=\\\"\\\" /&gt;&lt;/p&gt;&lt;/div&gt;\",\"state\":2,\"price\":0.00,\"cmmdtyType\":1,\"createTime\":\"2017-11-27 16:24:56\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0,\"inventory\":\"现货\",\"referencePrice\":0,\"supplyPrice\":41.80,\"picUrls\":[{\"id\":65623,\"productId\":13130,\"primary\":1,\"imageUrl\":\"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_1_800x800.jpg\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":65624,\"productId\":13130,\"primary\":0,\"imageUrl\":\"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_2_800x800.jpg\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":65625,\"productId\":13130,\"primary\":0,\"imageUrl\":\"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_3_800x800.jpg\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":65626,\"productId\":13130,\"primary\":0,\"imageUrl\":\"http://image4.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_4_800x800.jpg\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":65627,\"productId\":13130,\"primary\":0,\"imageUrl\":\"http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_5_800x800.jpg\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0}],\"attrs\":[{\"id\":204536,\"productId\":13130,\"pramGroupId\":204539,\"paramGroupDesc\":\"功效\",\"paramName\":\"功效\",\"paramValue\":\"修护\",\"sortIndex\":0,\"snparameterCode\":\"010463\",\"snparametersCode\":\"0003\",\"snsequence\":\"03\",\"snparameterSequence\":\"001\",\"coreFlag\":\"X\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204537,\"productId\":13130,\"pramGroupId\":204540,\"paramGroupDesc\":\"规格\",\"paramName\":\"规格\",\"paramValue\":\"750毫升\",\"sortIndex\":0,\"snparameterCode\":\"006916\",\"snparametersCode\":\"0002\",\"snsequence\":\"02\",\"snparameterSequence\":\"001\",\"coreFlag\":\"X\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204538,\"productId\":13130,\"pramGroupId\":204541,\"paramGroupDesc\":\"主体\",\"paramName\":\"保质期\",\"paramValue\":\"3年\",\"sortIndex\":0,\"snparameterCode\":\"007930\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"003\",\"coreFlag\":\"\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204539,\"productId\":13130,\"pramGroupId\":204542,\"paramGroupDesc\":\"主体\",\"paramName\":\"产地\",\"paramValue\":\"中国广东广州市\",\"sortIndex\":0,\"snparameterCode\":\"000158\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"004\",\"coreFlag\":\"\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204540,\"productId\":13130,\"pramGroupId\":204543,\"paramGroupDesc\":\"主体\",\"paramName\":\"适合发质\",\"paramValue\":\"混合性\",\"sortIndex\":0,\"snparameterCode\":\"006136\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"005\",\"coreFlag\":\"X\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204541,\"productId\":13130,\"pramGroupId\":204544,\"paramGroupDesc\":\"主体\",\"paramName\":\"适用人群\",\"paramValue\":\"成人\",\"sortIndex\":0,\"snparameterCode\":\"009754\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"006\",\"coreFlag\":\"X\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204542,\"productId\":13130,\"pramGroupId\":204545,\"paramGroupDesc\":\"主体\",\"paramName\":\"是否进口\",\"paramValue\":\"进口\",\"sortIndex\":0,\"snparameterCode\":\"007620\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"007\",\"coreFlag\":\"X\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204543,\"productId\":13130,\"pramGroupId\":204546,\"paramGroupDesc\":\"主体\",\"paramName\":\"包装\",\"paramValue\":\"单个装\",\"sortIndex\":0,\"snparameterCode\":\"006536\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"008\",\"coreFlag\":\"\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0},{\"id\":204544,\"productId\":13130,\"pramGroupId\":204547,\"paramGroupDesc\":\"主体\",\"paramName\":\"分类\",\"paramValue\":\"洗护套装\",\"sortIndex\":0,\"snparameterCode\":\"013801\",\"snparametersCode\":\"0001\",\"snsequence\":\"01\",\"snparameterSequence\":\"009\",\"coreFlag\":\"\",\"createTime\":\"2017-11-27 16:27:10\",\"updateTime\":\"2017-11-27 16:24:56\",\"isDeleted\":0}],\"rogwr\":\"7天无理由退货\"}}"}
+(200, u'{"statusCode":"200","statusMessage":"\u67e5\u8be2\u6210\u529f","responseContent":"{\\"statusCode\\":\\"200\\",\\"statusMessage\\":\\"\u64cd\u4f5c\u6210\u529f\\",\\"responseContent\\":{\\"id\\":13130,\\"categoryId\\":3876,\\"snCategory\\":\\"03d041f4-74a4-45cd-8cc8-61dffc5447da\\",\\"skuNo\\":\\"164463935\\",\\"generalSku\\":\\"\\",\\"skuHash\\":0,\\"skuProps\\":\\"\\",\\"skuDesc\\":\\"\\",\\"clusterId\\":\\"\\",\\"name\\":\\"\u6fb3\u6d32\u6fb3\u4e1d\u5a77\u767e\u82b1\u9999\u6c1b\u53bb\u5c51\u6b62\u75d2\u6d17\u53d1\u6c34750ml\\",\\"weight\\":\\"1.0\\",\\"imageUrl\\":\\"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_1_400x400.jpg\\",\\"brandName\\":\\"\u6fb3\u4e1d\u5a77(Ausitting)\\",\\"model\\":\\"\\",\\"productArea\\":\\"\\",\\"upc\\":\\"9349512000247\\",\\"saleUnit\\":\\"\u4ef6\\",\\"introduction\\":\\"&lt;div moduleId=\'R9000361_2\' moduleName=\'\u5546\u54c1\u4fe1\u606f\'&gt;&lt;p&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/103700873738326475761510_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/655347114785347301921400_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/837258561694813555515400_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/182233433013824050493970_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/209452248630897315561200_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/193607216210745227288168_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/146549030510141771285426_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/197944312057636835431950_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/763480311142119699240480_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"http://image.suning.cn/uimg/sop/commodity/142508348816093685176833_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;/p&gt;&lt;/div&gt;&lt;div moduleId=\'R9000361_3\' moduleName=\'\u5546\u54c1\u7279\u8272\'&gt;&lt;p&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/146549030510141771285426_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/193607216210745227288168_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/209452248630897315561200_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/655347114785347301921400_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;/p&gt;&lt;/div&gt;&lt;div moduleId=\'R9000361_4\' moduleName=\'\u5546\u54c1\u5b9e\u62cd\'&gt;&lt;p&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/106210798824821156489390_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/125844853913430203272925_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/525509191416286100960100_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;img onload=\\\\\\"if(this.width&gt;750){this.height=this.height*(750.0/this.width); this.width = 750;}\\\\\\" src=\\\\\\"https://image.suning.cn/uimg/sop/commodity/839098276583389277506700_x.jpg\\\\\\" alt=\\\\\\"\\\\\\" /&gt;&lt;/p&gt;&lt;/div&gt;\\",\\"state\\":2,\\"price\\":0.00,\\"cmmdtyType\\":1,\\"createTime\\":\\"2017-11-27 16:24:56\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0,\\"inventory\\":\\"\u73b0\u8d27\\",\\"referencePrice\\":0,\\"supplyPrice\\":41.80,\\"picUrls\\":[{\\"id\\":65623,\\"productId\\":13130,\\"primary\\":1,\\"imageUrl\\":\\"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_1_800x800.jpg\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":65624,\\"productId\\":13130,\\"primary\\":0,\\"imageUrl\\":\\"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_2_800x800.jpg\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":65625,\\"productId\\":13130,\\"primary\\":0,\\"imageUrl\\":\\"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_3_800x800.jpg\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":65626,\\"productId\\":13130,\\"primary\\":0,\\"imageUrl\\":\\"http://image4.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_4_800x800.jpg\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":65627,\\"productId\\":13130,\\"primary\\":0,\\"imageUrl\\":\\"http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_5_800x800.jpg\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0}],\\"attrs\\":[{\\"id\\":204536,\\"productId\\":13130,\\"pramGroupId\\":204539,\\"paramGroupDesc\\":\\"\u529f\u6548\\",\\"paramName\\":\\"\u529f\u6548\\",\\"paramValue\\":\\"\u4fee\u62a4\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"010463\\",\\"snparametersCode\\":\\"0003\\",\\"snsequence\\":\\"03\\",\\"snparameterSequence\\":\\"001\\",\\"coreFlag\\":\\"X\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204537,\\"productId\\":13130,\\"pramGroupId\\":204540,\\"paramGroupDesc\\":\\"\u89c4\u683c\\",\\"paramName\\":\\"\u89c4\u683c\\",\\"paramValue\\":\\"750\u6beb\u5347\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"006916\\",\\"snparametersCode\\":\\"0002\\",\\"snsequence\\":\\"02\\",\\"snparameterSequence\\":\\"001\\",\\"coreFlag\\":\\"X\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204538,\\"productId\\":13130,\\"pramGroupId\\":204541,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u4fdd\u8d28\u671f\\",\\"paramValue\\":\\"3\u5e74\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"007930\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"003\\",\\"coreFlag\\":\\"\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204539,\\"productId\\":13130,\\"pramGroupId\\":204542,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u4ea7\u5730\\",\\"paramValue\\":\\"\u4e2d\u56fd\u5e7f\u4e1c\u5e7f\u5dde\u5e02\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"000158\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"004\\",\\"coreFlag\\":\\"\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204540,\\"productId\\":13130,\\"pramGroupId\\":204543,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u9002\u5408\u53d1\u8d28\\",\\"paramValue\\":\\"\u6df7\u5408\u6027\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"006136\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"005\\",\\"coreFlag\\":\\"X\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204541,\\"productId\\":13130,\\"pramGroupId\\":204544,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u9002\u7528\u4eba\u7fa4\\",\\"paramValue\\":\\"\u6210\u4eba\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"009754\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"006\\",\\"coreFlag\\":\\"X\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204542,\\"productId\\":13130,\\"pramGroupId\\":204545,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u662f\u5426\u8fdb\u53e3\\",\\"paramValue\\":\\"\u8fdb\u53e3\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"007620\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"007\\",\\"coreFlag\\":\\"X\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204543,\\"productId\\":13130,\\"pramGroupId\\":204546,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u5305\u88c5\\",\\"paramValue\\":\\"\u5355\u4e2a\u88c5\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"006536\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"008\\",\\"coreFlag\\":\\"\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0},{\\"id\\":204544,\\"productId\\":13130,\\"pramGroupId\\":204547,\\"paramGroupDesc\\":\\"\u4e3b\u4f53\\",\\"paramName\\":\\"\u5206\u7c7b\\",\\"paramValue\\":\\"\u6d17\u62a4\u5957\u88c5\\",\\"sortIndex\\":0,\\"snparameterCode\\":\\"013801\\",\\"snparametersCode\\":\\"0001\\",\\"snsequence\\":\\"01\\",\\"snparameterSequence\\":\\"009\\",\\"coreFlag\\":\\"\\",\\"createTime\\":\\"2017-11-27 16:27:10\\",\\"updateTime\\":\\"2017-11-27 16:24:56\\",\\"isDeleted\\":0}],\\"rogwr\\":\\"7\u5929\u65e0\u7406\u7531\u9000\u8d27\\"}}"}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testGoodsShopInsale: 上架商家查看</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.2')" >
+        通过</a>
+
+    <div id='div_pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.2: 
+***** Begin time :  2018-02-07  17:34:51  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NzA2OSwiZXhwIjoxNTE4MDY3OTk3fQ.aq0se4AmPaeR5zcbDIYh6GhZPGOpJSwg15CB36E5jRmVBu31K_0a_ow1qP_iFoRF1K9HXnyj-DSn2FBS3dl6PA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NzA2OSwiZXhwIjoxNTE4MDY3OTk3fQ.aq0se4AmPaeR5zcbDIYh6GhZPGOpJSwg15CB36E5jRmVBu31K_0a_ow1qP_iFoRF1K9HXnyj-DSn2FBS3dl6PA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=89a13f4d-f1c9-44d0-b82c-773eb0a46944 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/queryShops
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":1,"size":0,"total":1,"pages":1,"list":[{"userId":"LX00000503","merchantName":"乐思购","shopId":50,"shopName":"wqx","shopCreateTime":"2017-11-20 09:20:31","manBusyness":"88888888888888888888888888888888888888888888888","putawayTime":"2017-12-04 10:35:27","solrNum":1,"totalPrices":"6.80"}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":1,"size":0,"total":1,"pages":1,"list":[{"userId":"LX00000503","merchantName":"\u4e50\u601d\u8d2d","shopId":50,"shopName":"wqx","shopCreateTime":"2017-11-20 09:20:31","manBusyness":"88888888888888888888888888888888888888888888888","putawayTime":"2017-12-04 10:35:27","solrNum":1,"totalPrices":"6.80"}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testInsaleList: 销售中</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.3')" >
+        通过</a>
+
+    <div id='div_pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.3: 
+***** Begin time :  2018-02-07  17:34:51  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NzI2MiwiZXhwIjoxNTE4MDY3OTk3fQ.k5oqiFxCQAVsmxBZEfU2U9DX0NL02c_Tn-ypgJN3U685f40H8RCgkM-9OJpmdw8UBGmphn9uEBZLr383GqATdw"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5NzI2MiwiZXhwIjoxNTE4MDY3OTk3fQ.k5oqiFxCQAVsmxBZEfU2U9DX0NL02c_Tn-ypgJN3U685f40H8RCgkM-9OJpmdw8UBGmphn9uEBZLr383GqATdw
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=152c494c-5d0f-4d20-8c52-5506ce578db9 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/pageListOfManage
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":7947,"pages":795,"list":[{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757972_1_400x400.jpg","skuNo":"102757972","name":"狮王DENTOR SYSTEMA四列超细毛牙刷(小头).","model":"","id":52663,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757976_1_400x400.jpg","skuNo":"102757976","name":"狮王DENTOR SYSTEMA牙龈护理高密度超细毛牙刷（标准）.","model":"","id":52654,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757977_1_400x400.jpg","skuNo":"102757977","name":"狮王DENTOR SYSTEMA牙龈护理高密度超细毛牙刷（小头）.","model":"","id":52658,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"20.10","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000109263737_1_400x400.jpg","skuNo":"109263737","name":"狮王（Lion）小狮王婴幼儿牙刷（0-3岁）妈妈辅助（颜色随机发货）","model":"","id":52660,"stock":"现货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000125312840_1_400x400.jpg","skuNo":"125312840","name":"狮王（Lion）细齿洁超劲螺旋牙刷×4（新老包装、颜色随机发放）","model":"","id":52655,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"29.90","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998689_1_400x400.jpg","skuNo":"126998689","name":"狮王（Lion）细齿洁精巧牙刷×4（新老包装、颜色随机发放）","model":"","id":52659,"stock":"现货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998888_1_400x400.jpg","skuNo":"126998888","name":"狮王（Lion）细齿洁晶彩牙刷×4支（新老包装、颜色随机发放）","model":"","id":52656,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000127933928_1_400x400.jpg","skuNo":"127933928","name":"狮王（Lion）细齿洁弹力护龈牙刷","model":"","id":52657,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000618288219_1_400x400.jpg","skuNo":"618288219","name":"狮王（Lion）细齿洁晶彩牙刷特惠装","model":"","id":52661,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000630900163_1_400x400.jpg","skuNo":"630900163","name":"狮王（Lion）细齿洁极细炭洁牙刷S型特惠装（颜色随机发放）","model":"","id":52662,"stock":"无货","secondName":"营养辅食"}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":7947,"pages":795,"list":[{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757972_1_400x400.jpg","skuNo":"102757972","name":"\u72ee\u738bDENTOR SYSTEMA\u56db\u5217\u8d85\u7ec6\u6bdb\u7259\u5237(\u5c0f\u5934).","model":"","id":52663,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757976_1_400x400.jpg","skuNo":"102757976","name":"\u72ee\u738bDENTOR SYSTEMA\u7259\u9f88\u62a4\u7406\u9ad8\u5bc6\u5ea6\u8d85\u7ec6\u6bdb\u7259\u5237\uff08\u6807\u51c6\uff09.","model":"","id":52654,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757977_1_400x400.jpg","skuNo":"102757977","name":"\u72ee\u738bDENTOR SYSTEMA\u7259\u9f88\u62a4\u7406\u9ad8\u5bc6\u5ea6\u8d85\u7ec6\u6bdb\u7259\u5237\uff08\u5c0f\u5934\uff09.","model":"","id":52658,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"20.10","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000109263737_1_400x400.jpg","skuNo":"109263737","name":"\u72ee\u738b\uff08Lion\uff09\u5c0f\u72ee\u738b\u5a74\u5e7c\u513f\u7259\u5237\uff080-3\u5c81\uff09\u5988\u5988\u8f85\u52a9\uff08\u989c\u8272\u968f\u673a\u53d1\u8d27\uff09","model":"","id":52660,"stock":"\u73b0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000125312840_1_400x400.jpg","skuNo":"125312840","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u8d85\u52b2\u87ba\u65cb\u7259\u5237\xd74\uff08\u65b0\u8001\u5305\u88c5\u3001\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52655,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"29.90","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998689_1_400x400.jpg","skuNo":"126998689","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u7cbe\u5de7\u7259\u5237\xd74\uff08\u65b0\u8001\u5305\u88c5\u3001\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52659,"stock":"\u73b0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998888_1_400x400.jpg","skuNo":"126998888","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u6676\u5f69\u7259\u5237\xd74\u652f\uff08\u65b0\u8001\u5305\u88c5\u3001\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52656,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000127933928_1_400x400.jpg","skuNo":"127933928","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u5f39\u529b\u62a4\u9f88\u7259\u5237","model":"","id":52657,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000618288219_1_400x400.jpg","skuNo":"618288219","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u6676\u5f69\u7259\u5237\u7279\u60e0\u88c5","model":"","id":52661,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000630900163_1_400x400.jpg","skuNo":"630900163","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u6781\u7ec6\u70ad\u6d01\u7259\u5237S\u578b\u7279\u60e0\u88c5\uff08\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52662,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testInsaleList_oneGoodQuery1: 销售中----某个商品编号搜索查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.4')" >
+        通过</a>
+
+    <div id='div_pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.4: 
+***** Begin time :  2018-02-07  17:34:52  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5Nzg2NywiZXhwIjoxNTE4MDY3OTk3fQ.2gnImYFrOAHnync-9Z7q_iGapcofzwH-n0gFwQN2GJE0eKHY1lzK32w27c-XKOBiGafvCFfNaOLNI2BB7LOkRA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5Nzg2NywiZXhwIjoxNTE4MDY3OTk3fQ.2gnImYFrOAHnync-9Z7q_iGapcofzwH-n0gFwQN2GJE0eKHY1lzK32w27c-XKOBiGafvCFfNaOLNI2BB7LOkRA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=0dbe42a2-1fa6-4a63-9af1-261b8d4e1dd7 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/pageListOfManage
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":1,"pages":1,"list":[{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757972_1_400x400.jpg","skuNo":"102757972","name":"狮王DENTOR SYSTEMA四列超细毛牙刷(小头).","model":"","id":52663,"stock":"无货","secondName":"营养辅食"}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":1,"pages":1,"list":[{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757972_1_400x400.jpg","skuNo":"102757972","name":"\u72ee\u738bDENTOR SYSTEMA\u56db\u5217\u8d85\u7ec6\u6bdb\u7259\u5237(\u5c0f\u5934).","model":"","id":52663,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testInsaleList_oneGoodQuery2: 销售中----某个商品名搜索查询</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.5')" >
+        通过</a>
+
+    <div id='div_pt3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.5: 
+***** Begin time :  2018-02-07  17:34:52  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5ODMwOCwiZXhwIjoxNTE4MDY3OTk4fQ.2gkjrbeTEU11nB37fEp6dn6va6LL3_Y5advJWfapQnK2EYLVaNRED8CSTrN5bOUPPtzU9ejDC1hrxr3y9120Eg"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5ODMwOCwiZXhwIjoxNTE4MDY3OTk4fQ.2gkjrbeTEU11nB37fEp6dn6va6LL3_Y5advJWfapQnK2EYLVaNRED8CSTrN5bOUPPtzU9ejDC1hrxr3y9120Eg
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=a1e5e1c4-658e-442e-bffb-179b87c8c8b5 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/pageListOfManage
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":37,"pages":4,"list":[{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757972_1_400x400.jpg","skuNo":"102757972","name":"狮王DENTOR SYSTEMA四列超细毛牙刷(小头).","model":"","id":52663,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757976_1_400x400.jpg","skuNo":"102757976","name":"狮王DENTOR SYSTEMA牙龈护理高密度超细毛牙刷（标准）.","model":"","id":52654,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757977_1_400x400.jpg","skuNo":"102757977","name":"狮王DENTOR SYSTEMA牙龈护理高密度超细毛牙刷（小头）.","model":"","id":52658,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"20.10","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000109263737_1_400x400.jpg","skuNo":"109263737","name":"狮王（Lion）小狮王婴幼儿牙刷（0-3岁）妈妈辅助（颜色随机发货）","model":"","id":52660,"stock":"现货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000125312840_1_400x400.jpg","skuNo":"125312840","name":"狮王（Lion）细齿洁超劲螺旋牙刷×4（新老包装、颜色随机发放）","model":"","id":52655,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"29.90","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998689_1_400x400.jpg","skuNo":"126998689","name":"狮王（Lion）细齿洁精巧牙刷×4（新老包装、颜色随机发放）","model":"","id":52659,"stock":"现货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998888_1_400x400.jpg","skuNo":"126998888","name":"狮王（Lion）细齿洁晶彩牙刷×4支（新老包装、颜色随机发放）","model":"","id":52656,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000127933928_1_400x400.jpg","skuNo":"127933928","name":"狮王（Lion）细齿洁弹力护龈牙刷","model":"","id":52657,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000618288219_1_400x400.jpg","skuNo":"618288219","name":"狮王（Lion）细齿洁晶彩牙刷特惠装","model":"","id":52661,"stock":"无货","secondName":"营养辅食"},{"snPrice":"","firstName":"母婴/玩具乐器","brandName":"狮王(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000630900163_1_400x400.jpg","skuNo":"630900163","name":"狮王（Lion）细齿洁极细炭洁牙刷S型特惠装（颜色随机发放）","model":"","id":52662,"stock":"无货","secondName":"营养辅食"}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":37,"pages":4,"list":[{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757972_1_400x400.jpg","skuNo":"102757972","name":"\u72ee\u738bDENTOR SYSTEMA\u56db\u5217\u8d85\u7ec6\u6bdb\u7259\u5237(\u5c0f\u5934).","model":"","id":52663,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757976_1_400x400.jpg","skuNo":"102757976","name":"\u72ee\u738bDENTOR SYSTEMA\u7259\u9f88\u62a4\u7406\u9ad8\u5bc6\u5ea6\u8d85\u7ec6\u6bdb\u7259\u5237\uff08\u6807\u51c6\uff09.","model":"","id":52654,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000102757977_1_400x400.jpg","skuNo":"102757977","name":"\u72ee\u738bDENTOR SYSTEMA\u7259\u9f88\u62a4\u7406\u9ad8\u5bc6\u5ea6\u8d85\u7ec6\u6bdb\u7259\u5237\uff08\u5c0f\u5934\uff09.","model":"","id":52658,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"20.10","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000109263737_1_400x400.jpg","skuNo":"109263737","name":"\u72ee\u738b\uff08Lion\uff09\u5c0f\u72ee\u738b\u5a74\u5e7c\u513f\u7259\u5237\uff080-3\u5c81\uff09\u5988\u5988\u8f85\u52a9\uff08\u989c\u8272\u968f\u673a\u53d1\u8d27\uff09","model":"","id":52660,"stock":"\u73b0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000125312840_1_400x400.jpg","skuNo":"125312840","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u8d85\u52b2\u87ba\u65cb\u7259\u5237\xd74\uff08\u65b0\u8001\u5305\u88c5\u3001\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52655,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"29.90","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998689_1_400x400.jpg","skuNo":"126998689","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u7cbe\u5de7\u7259\u5237\xd74\uff08\u65b0\u8001\u5305\u88c5\u3001\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52659,"stock":"\u73b0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000126998888_1_400x400.jpg","skuNo":"126998888","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u6676\u5f69\u7259\u5237\xd74\u652f\uff08\u65b0\u8001\u5305\u88c5\u3001\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52656,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000127933928_1_400x400.jpg","skuNo":"127933928","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u5f39\u529b\u62a4\u9f88\u7259\u5237","model":"","id":52657,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000618288219_1_400x400.jpg","skuNo":"618288219","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u6676\u5f69\u7259\u5237\u7279\u60e0\u88c5","model":"","id":52661,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"},{"snPrice":"","firstName":"\u6bcd\u5a74/\u73a9\u5177\u4e50\u5668","brandName":"\u72ee\u738b(LION)","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000630900163_1_400x400.jpg","skuNo":"630900163","name":"\u72ee\u738b\uff08Lion\uff09\u7ec6\u9f7f\u6d01\u6781\u7ec6\u70ad\u6d01\u7259\u5237S\u578b\u7279\u60e0\u88c5\uff08\u989c\u8272\u968f\u673a\u53d1\u653e\uff09","model":"","id":52662,"stock":"\u65e0\u8d27","secondName":"\u8425\u517b\u8f85\u98df"}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testblockedsaleList: 已屏蔽</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.6')" >
+        通过</a>
+
+    <div id='div_pt3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.6: 
+***** Begin time :  2018-02-07  17:34:53  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5ODg2MywiZXhwIjoxNTE4MDY3OTk4fQ.F7xKK5lDBywvMr3nPmU8jWDV3cD3bSWYfEgXt7GsDBgjpeluJG4gYQjYeOwL1oANPMhYYhgpqxzrcQFqDEiZ2w"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5ODg2MywiZXhwIjoxNTE4MDY3OTk4fQ.F7xKK5lDBywvMr3nPmU8jWDV3cD3bSWYfEgXt7GsDBgjpeluJG4gYQjYeOwL1oANPMhYYhgpqxzrcQFqDEiZ2w
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=5b208403-6998-46ca-bf3c-2ba89d5c90cb for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/pageListOfManage
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":1,"pages":1,"list":[{"snPrice":"","brandName":"澳丝婷(Ausitting)","saleCount":"0","price":"41.80","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_1_400x400.jpg","skuNo":"164463935","name":"澳洲澳丝婷百花香氛去屑止痒洗发水750ml","model":"","id":13130,"stock":"现货","upStoreCount":"1"}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":1,"pages":1,"list":[{"snPrice":"","brandName":"\u6fb3\u4e1d\u5a77(Ausitting)","saleCount":"0","price":"41.80","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000164463935_1_400x400.jpg","skuNo":"164463935","name":"\u6fb3\u6d32\u6fb3\u4e1d\u5a77\u767e\u82b1\u9999\u6c1b\u53bb\u5c51\u6b62\u75d2\u6d17\u53d1\u6c34750ml","model":"","id":13130,"stock":"\u73b0\u8d27","upStoreCount":"1"}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt3.7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>testoffsaleList: 已下架</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt3.7')" >
+        通过</a>
+
+    <div id='div_pt3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+pt3.7: 
+***** Begin time :  2018-02-07  17:34:53  Wednesday
+http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//authentication
+admin
+96e79218965eb72c92a549dd5a330112
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"token":"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5OTI2NSwiZXhwIjoxNTE4MDY3OTk5fQ.lPBlrZfYW5qcgHRjkyu4D3MesQQkg9yq8380lz63v57E8RlTxjtC2oxR9AHeFCarnr4PkNIve8Vxs0RG8OBYmA"}}
+eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1ZGllbmNlIjoid2ViIiwiY3JlYXRlZCI6MTUxNzk5NTk5OTI2NSwiZXhwIjoxNTE4MDY3OTk5fQ.lPBlrZfYW5qcgHRjkyu4D3MesQQkg9yq8380lz63v57E8RlTxjtC2oxR9AHeFCarnr4PkNIve8Vxs0RG8OBYmA
+&lt;Response [200]&gt;
+cookies:&lt;RequestsCookieJar[&lt;Cookie SESSION=7b4643ed-5736-448f-aace-f9e22be91602 for sit.mall-mgr-sn.1332255.com/&gt;]&gt;
+接口URL:http://sit.mall-mgr-sn.1332255.com/mall-mgr-sn-api//api/product/pageListOfManage
+{"statusCode":"200","statusMessage":"操作成功","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":281,"pages":29,"list":[{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124756722_1_400x400.jpg","skuNo":"124756722","name":"美天弧形桃心口罩","model":"美天弧形桃心口罩","id":55176,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124756974_1_400x400.jpg","skuNo":"124756974","name":"美天弧形彩色口罩","model":"美天弧形彩色口罩","id":55179,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124757751_1_400x400.jpg","skuNo":"124757751","name":"美天平面彩色口罩","model":"美天平面彩色口罩","id":55182,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124757846_1_400x400.jpg","skuNo":"124757846","name":"美天平面桃心口罩","model":"美天平面桃心口罩","id":55180,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124757908_1_400x400.jpg","skuNo":"124757908","name":"美天弹力豹点口罩","model":"美天弹力豹点口罩","id":55178,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124758106_1_400x400.jpg","skuNo":"124758106","name":"美天弹力彩色口罩","model":"30*11*0.1","id":55177,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124758558_1_400x400.jpg","skuNo":"124758558","name":"美天儿童彩色口罩","model":"美天儿童彩色口罩","id":55181,"stock":"无货","secondName":"生活用品"},{"snPrice":"","firstName":"居家用品/生活日用","brandName":"美天","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124758847_1_400x400.jpg","skuNo":"124758847","name":"美天PM2.5口罩","model":"美天PM2.5口罩","id":55183,"stock":"无货","secondName":"生活用品"},{"snPrice":"","brandName":"欧莱雅(LOREAL)","price":"38.00","imageUrl":"http://image4.suning.cn/uimg/b2c/newcatentries/0000000000-000000000125361364_1_400x400.jpg","skuNo":"125361364","name":"欧莱雅(LOREAL)透明质酸水润洗发露400ml","model":"","id":13307,"stock":"现货"},{"snPrice":"","brandName":"lishan","price":"99.00","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000664112102_1_400x400.jpg","skuNo":"664112102","name":"日本Lishan 马油无硅油保湿洗发水600ml","model":"","id":13110,"stock":"现货"}]}}
+(200, u'{"statusCode":"200","statusMessage":"\u64cd\u4f5c\u6210\u529f","responseContent":{"pageNum":1,"pageSize":10,"size":0,"total":281,"pages":29,"list":[{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124756722_1_400x400.jpg","skuNo":"124756722","name":"\u7f8e\u5929\u5f27\u5f62\u6843\u5fc3\u53e3\u7f69","model":"\u7f8e\u5929\u5f27\u5f62\u6843\u5fc3\u53e3\u7f69","id":55176,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124756974_1_400x400.jpg","skuNo":"124756974","name":"\u7f8e\u5929\u5f27\u5f62\u5f69\u8272\u53e3\u7f69","model":"\u7f8e\u5929\u5f27\u5f62\u5f69\u8272\u53e3\u7f69","id":55179,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124757751_1_400x400.jpg","skuNo":"124757751","name":"\u7f8e\u5929\u5e73\u9762\u5f69\u8272\u53e3\u7f69","model":"\u7f8e\u5929\u5e73\u9762\u5f69\u8272\u53e3\u7f69","id":55182,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124757846_1_400x400.jpg","skuNo":"124757846","name":"\u7f8e\u5929\u5e73\u9762\u6843\u5fc3\u53e3\u7f69","model":"\u7f8e\u5929\u5e73\u9762\u6843\u5fc3\u53e3\u7f69","id":55180,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image1.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124757908_1_400x400.jpg","skuNo":"124757908","name":"\u7f8e\u5929\u5f39\u529b\u8c79\u70b9\u53e3\u7f69","model":"\u7f8e\u5929\u5f39\u529b\u8c79\u70b9\u53e3\u7f69","id":55178,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image3.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124758106_1_400x400.jpg","skuNo":"124758106","name":"\u7f8e\u5929\u5f39\u529b\u5f69\u8272\u53e3\u7f69","model":"30*11*0.1","id":55177,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124758558_1_400x400.jpg","skuNo":"124758558","name":"\u7f8e\u5929\u513f\u7ae5\u5f69\u8272\u53e3\u7f69","model":"\u7f8e\u5929\u513f\u7ae5\u5f69\u8272\u53e3\u7f69","id":55181,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","firstName":"\u5c45\u5bb6\u7528\u54c1/\u751f\u6d3b\u65e5\u7528","brandName":"\u7f8e\u5929","price":"","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000124758847_1_400x400.jpg","skuNo":"124758847","name":"\u7f8e\u5929PM2.5\u53e3\u7f69","model":"\u7f8e\u5929PM2.5\u53e3\u7f69","id":55183,"stock":"\u65e0\u8d27","secondName":"\u751f\u6d3b\u7528\u54c1"},{"snPrice":"","brandName":"\u6b27\u83b1\u96c5(LOREAL)","price":"38.00","imageUrl":"http://image4.suning.cn/uimg/b2c/newcatentries/0000000000-000000000125361364_1_400x400.jpg","skuNo":"125361364","name":"\u6b27\u83b1\u96c5(LOREAL)\u900f\u660e\u8d28\u9178\u6c34\u6da6\u6d17\u53d1\u9732400ml","model":"","id":13307,"stock":"\u73b0\u8d27"},{"snPrice":"","brandName":"lishan","price":"99.00","imageUrl":"http://image2.suning.cn/uimg/b2c/newcatentries/0000000000-000000000664112102_1_400x400.jpg","skuNo":"664112102","name":"\u65e5\u672cLishan \u9a6c\u6cb9\u65e0\u7845\u6cb9\u4fdd\u6e7f\u6d17\u53d1\u6c34600ml","model":"","id":13110,"stock":"\u73b0\u8d27"}]}}')
+None
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td>总计</td>
+    <td>13</td>
+    <td>12</td>
+    <td>1</td>
+    <td>0</td>
+    <td></td>
+</tr>
+</table>
+
+
+<div id='ending'>
+    <p align="center">
+    Copyright &copy 2017
+    <a href="http://www.heilpay.com" target="_blank">HeilPay</a>
+    Inc. All rights reserved.
+    </p>
+    <p align="center">TestGroup ,A4-1901 Room,Kexing Science Park,Nanshan,Shenzhen,GD,China </p>
+</div>
+
+
+</div>
+</body>
+</html>

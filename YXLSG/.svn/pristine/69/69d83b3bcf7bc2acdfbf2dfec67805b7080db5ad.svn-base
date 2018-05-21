@@ -1,0 +1,292 @@
+2018-02-07 17:22:00,319  - HbTestRunner.py : INFO  The testcase number is : 3
+2018-02-07 17:22:00,319  - HbTestRunner.py : INFO  The testcase name is : Mgr_LogInCase.py
+2018-02-07 17:22:00,319  - HbTestRunner.py : INFO  The testcase name is : __init__.py
+2018-02-07 17:22:00,516  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:00,516  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:22:00,516  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:00,516  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:00,516  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:00  Wednesday
+2018-02-07 17:22:00,525  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:00,663  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:00,671  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:00,747  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:00,747  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:22:00,747  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:00,747  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:00,747  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:00  Wednesday
+2018-02-07 17:22:00,749  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:00,872  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:00,890  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,101  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:01,101  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:22:01,101  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:01,102  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:01,102  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:01  Wednesday
+2018-02-07 17:22:01,105  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,229  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,240  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,384  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:01,384  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:22:01,384  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:01,384  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:01,384  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:01  Wednesday
+2018-02-07 17:22:01,388  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,510  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:01,510  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:22:01,512  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:01,512  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:01,513  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:01  Wednesday
+2018-02-07 17:22:01,513  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:01,515  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:01,515  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:01,515  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:01,515  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:01  Wednesday
+2018-02-07 17:22:01,516  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,637  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:01,647  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,176  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:02,176  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:02,176  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:02,176  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:02,176  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:02  Wednesday
+2018-02-07 17:22:02,177  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,299  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,311  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,374  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:02,375  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:02,375  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:02,375  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:02,375  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:02  Wednesday
+2018-02-07 17:22:02,378  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,503  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,517  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:02,973  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:02,973  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:02,973  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:02,973  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:02,973  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:02  Wednesday
+2018-02-07 17:22:02,976  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:03,099  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:03,111  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:03,394  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:03,394  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:03,394  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:03,394  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:03,394  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:03  Wednesday
+2018-02-07 17:22:03,398  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:03,529  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:03,555  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:04,303  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:04,303  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:04,303  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:04,303  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:04,305  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:04  Wednesday
+2018-02-07 17:22:04,305  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:04,446  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:04,460  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:05,239  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:22:05,239  - Mgr_LogInCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:22:05,240  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:22:05,240  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:22:05,240  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:22:05  Wednesday
+2018-02-07 17:22:05,243  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:05,365  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:22:05,374  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:43,838  - HbTestRunner.py : INFO  The testcase number is : 3
+2018-02-07 17:25:43,838  - HbTestRunner.py : INFO  The testcase name is : Mgr_LogInCase.py
+2018-02-07 17:25:43,838  - HbTestRunner.py : INFO  The testcase name is : Mgr_QueryCase.py
+2018-02-07 17:25:43,838  - HbTestRunner.py : INFO  The testcase name is : __init__.py
+2018-02-07 17:25:44,026  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:25:44,026  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:25:44,026  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:25:44,026  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:44,026  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:25:44  Wednesday
+2018-02-07 17:25:44,032  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,170  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,178  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,503  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:25:44,503  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:25:44,503  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:25:44,503  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:44,503  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:25:44  Wednesday
+2018-02-07 17:25:44,505  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,625  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,634  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,785  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:25:44,785  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:25:44,786  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:25:44,786  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:44,786  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:25:44  Wednesday
+2018-02-07 17:25:44,788  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,914  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:44,927  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,035  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:25:45,035  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:25:45,035  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:25:45,036  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:45,036  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:25:45  Wednesday
+2018-02-07 17:25:45,038  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,164  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:25:45,164  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:25:45,164  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:25:45,164  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:45,164  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:25:45  Wednesday
+2018-02-07 17:25:45,165  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:45,165  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:45,165  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:45,165  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:45,165  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:45  Wednesday
+2018-02-07 17:25:45,167  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,289  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,298  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,831  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:45,832  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:45,832  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:45,832  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:45,832  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:45  Wednesday
+2018-02-07 17:25:45,835  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,960  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:45,974  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:46,025  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:46,025  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:46,025  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:46,026  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:46,026  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:46  Wednesday
+2018-02-07 17:25:46,028  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:46,148  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:46,161  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:46,617  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:46,618  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:46,618  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:46,618  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:46,618  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:46  Wednesday
+2018-02-07 17:25:46,621  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:46,747  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:46,760  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:47,029  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:47,029  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:47,029  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:47,029  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:47,030  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:47  Wednesday
+2018-02-07 17:25:47,032  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:47,161  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:47,174  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:47,601  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:47,601  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:47,601  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:47,601  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:47,602  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:47  Wednesday
+2018-02-07 17:25:47,605  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:47,730  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:47,742  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:48,029  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:25:48,029  - Mgr_QueryCase.py : INFO  执行用例归属于>>:苏宁商品管理
+2018-02-07 17:25:48,030  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:25:48,030  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:25:48,030  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:25:48  Wednesday
+2018-02-07 17:25:48,033  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:48,158  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:25:48,174  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,210  - HbTestRunner.py : INFO  The testcase number is : 3
+2018-02-07 17:34:49,210  - HbTestRunner.py : INFO  The testcase name is : Mgr_LogInCase.py
+2018-02-07 17:34:49,210  - HbTestRunner.py : INFO  The testcase name is : Mgr_QueryCase.py
+2018-02-07 17:34:49,211  - HbTestRunner.py : INFO  The testcase name is : __init__.py
+2018-02-07 17:34:49,414  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:34:49,414  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:34:49,414  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:34:49,414  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:49,414  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:34:49  Wednesday
+2018-02-07 17:34:49,420  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,575  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,592  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,625  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:34:49,627  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:34:49,627  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:34:49,627  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:49,627  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:34:49  Wednesday
+2018-02-07 17:34:49,628  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,753  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,767  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:49,907  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:34:49,908  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:34:49,908  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:34:49,908  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:49,908  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:34:49  Wednesday
+2018-02-07 17:34:49,911  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,032  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,043  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,471  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:34:50,473  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:34:50,473  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:34:50,473  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:50,473  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:34:50  Wednesday
+2018-02-07 17:34:50,474  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,611  - Mgr_LogInCase.py : WARNING  
+2018-02-07 17:34:50,611  - Mgr_LogInCase.py : INFO  执行用例归属于>>:管理后台-登录及注销
+2018-02-07 17:34:50,611  - Mgr_LogInCase.py : INFO  Username:admin
+2018-02-07 17:34:50,611  - Mgr_LogInCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:50,611  - Mgr_LogInCase.py : INFO  Begin time : 2018-02-07  17:34:50  Wednesday
+2018-02-07 17:34:50,612  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:50,612  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-商家商品管理
+2018-02-07 17:34:50,612  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:50,614  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:50,614  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:50  Wednesday
+2018-02-07 17:34:50,615  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,737  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,750  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,838  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:50,838  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:50,838  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:50,838  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:50,838  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:50  Wednesday
+2018-02-07 17:34:50,841  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,963  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:50,976  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:51,505  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:51,506  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:51,506  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:51,506  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:51,506  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:51  Wednesday
+2018-02-07 17:34:51,509  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:51,631  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:51,641  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:51,700  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:51,701  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:51,701  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:51,701  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:51,701  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:51  Wednesday
+2018-02-07 17:34:51,703  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:51,823  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:51,835  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:52,305  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:52,306  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:52,306  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:52,306  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:52,306  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:52  Wednesday
+2018-02-07 17:34:52,308  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:52,430  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:52,444  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:52,744  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:52,744  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:52,746  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:52,746  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:52,746  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:52  Wednesday
+2018-02-07 17:34:52,749  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:52,874  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:52,888  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:53,299  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:53,299  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:53,299  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:53,301  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:53,301  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:53  Wednesday
+2018-02-07 17:34:53,303  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:53,424  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:53,433  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:53,701  - Mgr_QueryCase.py : WARNING  
+2018-02-07 17:34:53,703  - Mgr_QueryCase.py : INFO  执行用例归属于>>:管理后台-苏宁商品管理
+2018-02-07 17:34:53,703  - Mgr_QueryCase.py : INFO  Username:admin
+2018-02-07 17:34:53,703  - Mgr_QueryCase.py : INFO  Password:96e79218965eb72c92a549dd5a330112
+2018-02-07 17:34:53,703  - Mgr_QueryCase.py : INFO  Begin time : 2018-02-07  17:34:53  Wednesday
+2018-02-07 17:34:53,704  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:53,828  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
+2018-02-07 17:34:53,838  - connectionpool.py : INFO  Starting new HTTP connection (1): sit.mall-mgr-sn.1332255.com
